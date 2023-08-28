@@ -14,7 +14,7 @@ import { successResponseHandler } from "../mock/successServer";
 
 import { mockProjects } from "../mock/projects";
 
-describe("Project Create", () => {
+describe("User creates project", () => {
   const server = setupServer(...successResponseHandler);
   beforeAll(() => server.listen());
   afterEach(() => server.resetHandlers());
@@ -24,7 +24,7 @@ describe("Project Create", () => {
     render(<App />);
   });
 
-  it("create and render new project's title in sidebar", async () => {
+  it("user creates a new project and see it's title rendered in sidebar", async () => {
     // 1. user click on  button to open modal to create a project
     const drawer = await screen.findByLabelText("sidebar-drawer");
     const addProjectSection = await within(drawer).findByLabelText(

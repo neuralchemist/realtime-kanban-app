@@ -14,7 +14,7 @@ import { successResponseHandler } from "../mock/successServer";
 
 import { mockProjects } from "../mock/projects";
 
-describe("Project Find Success", () => {
+describe("User sees projects", () => {
   const server = setupServer(...successResponseHandler);
   beforeAll(() => server.listen());
   afterEach(() => server.resetHandlers());
@@ -25,7 +25,7 @@ describe("Project Find Success", () => {
     render(<App />);
   });
 
-  it("fetch and render list of projects title in sidebar", async () => {
+  it("User sees list of projects in sidebar", async () => {
     // 1. user sees 'loading project' message in the sidebar drawer
     const drawer = await screen.findByLabelText("sidebar-drawer");
 
