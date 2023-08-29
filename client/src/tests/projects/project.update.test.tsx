@@ -33,7 +33,7 @@ const selectAProject = async () => {
   await userEvent.click(firstProject);
 };
 
-describe("Project Update", () => {
+describe("User updates a project", () => {
   const server = setupServer(...successResponseHandler);
   beforeAll(() => server.listen());
   afterEach(() => server.resetHandlers());
@@ -43,7 +43,7 @@ describe("Project Update", () => {
     render(<App />);
   });
 
-  it("update and render project title and description in project section of board", async () => {
+  it("User updates  project's title and description and see changes in board", async () => {
     // 1. user select a project
     await selectAProject();
 

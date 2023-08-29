@@ -14,4 +14,5 @@ export const StyledBoard = styled(Box)(({ theme }) => ({
 
   // ----DEBUG---
   // border: "3px dotted blue",
+  // width: '90vw'
 }));

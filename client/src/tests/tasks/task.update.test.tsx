@@ -30,7 +30,7 @@ const selectAProject = async () => {
   await userEvent.click(firstProject);
 };
 
-describe("Task Update Success", () => {
+describe("User updates task successfully", () => {
   // setup server
 
   const server = setupServer(...successResponseHandler);
@@ -43,7 +43,7 @@ describe("Task Update Success", () => {
     render(<App />);
   });
 
-  it("update and render  new task's title in board", async () => {
+  it("User updates a task's title and description and see changes in board", async () => {
     // 1. user select a project
     await selectAProject();
 

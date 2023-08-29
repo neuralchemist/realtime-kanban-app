@@ -32,7 +32,7 @@ const selectAProject = async () => {
   await userEvent.click(firstProject);
 };
 
-describe("Task Find Success", () => {
+describe("User sees the tasks", () => {
   const server = setupServer(...successResponseHandler);
   beforeAll(() => server.listen());
   afterEach(() => server.resetHandlers());
@@ -43,7 +43,7 @@ describe("Task Find Success", () => {
     render(<App />);
   });
 
-  it("fetch and render list of tasks title in board", async () => {
+  it("User sees list of tasks in board", async () => {
     // 1. user select a project
     await selectAProject();
     // 2. user sees the task titles rendered in the task section of project page

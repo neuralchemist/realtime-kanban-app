@@ -11,7 +11,7 @@ import { beforeAll, afterEach, afterAll } from "vitest";
 import App from "src/App";
 import { failureResponseHandler } from "../mock/failureServer";
 
-describe("Project Find Failure", () => {
+describe("User sees error message", () => {
   // setup server
   const server = setupServer(...failureResponseHandler);
   beforeAll(() => server.listen());
@@ -23,7 +23,7 @@ describe("Project Find Failure", () => {
     render(<App />);
   });
 
-  it("display 'failed to load projects' inside sidebar drawer", async () => {
+  it("Users sees error message in sidebar when project fails to load", async () => {
     const drawer = await screen.findByLabelText("sidebar-drawer");
 
     await waitForElementToBeRemoved(() =>

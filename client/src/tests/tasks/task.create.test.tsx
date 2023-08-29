@@ -32,7 +32,7 @@ const selectAProject = async () => {
   await userEvent.click(firstProject);
 };
 
-describe("Task Create Success", () => {
+describe("User creates a task successfully", () => {
   // setup server
 
   const server = setupServer(...successResponseHandler);
@@ -45,7 +45,7 @@ describe("Task Create Success", () => {
     render(<App />);
   });
 
-  it("create and render  new task's title in board", async () => {
+  it("User creates a task and sees it in board", async () => {
     // 1. user select a project
     await selectAProject();
 
