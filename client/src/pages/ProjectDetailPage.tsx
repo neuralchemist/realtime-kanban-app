@@ -5,7 +5,7 @@ export function ProjectDetailPage() {
   return (
     <Box
       sx={{
-        maxWidth: "1200px",
+        maxWidth: "1000px",
       }}
     >
       <Board />
