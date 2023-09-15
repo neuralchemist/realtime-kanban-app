@@ -48,7 +48,10 @@ export function useUpdateProject() {
       }
     },
   });
-
+  
+  // import { QueryKey, UseQueryOptions, UseQueryResult } from "react-query";
+  // import { Auth, AuthError, NextOrObserver, User } from "firebase/auth";
+  // options: Omit<UseQueryOptions<User, AuthError, R>, "queryFn"> = {}
   const updateProject = (
     id: IProject["_id"],
     project: IProjectUpdate,

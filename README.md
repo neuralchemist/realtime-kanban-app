@@ -1,80 +1,117 @@
-# realtime-kanban-app
+# Realtime Kanban App
 
-### Introduction
 
-* * *
+Welcome to the Full-stack Real-time Kanban App with drag-and-drop! This project uses the MERN stack (MongoDB, Express, React & Nodejs). It is designed for freelancers and startups, but can also be used for almost any sized company. With this application, you can collaborate on projects with your team members from all over the world in real time. I've leveraged my expertise in modern software development practices and methodologies to create an application that's both functional and maintainable.
 
-This is a full stack real-time kanban application with drag-and-drop, made using the MERN stack (MongoDB, Express, React & Nodejs). It is specially designed for freelancers and small businesses, but can be used for almost any sized company. With this application, you can collaborate on projects with your team members from all over the world in real-time. Start using it by downloading the entire Source code and run it on your server.
+You can start using it by downloading the entire Source code and then run it on your server.
+
 
 <img src="https://github.com/neuralchemist/realtime-kanban-app/blob/main/client/src/assets/realtime-kanban-app.gif" alt="realtime-kanban-app.gif" style="float: left; margin-right: 10px;" />
 
 
-### How I worked on this project
+## How I worked on this project
 
-* * *
+In developing this project, I adhered to industry best practices to ensure efficiency and maintainability. My goal was to simulate a professional work environment. 
 
-My goal was to simulate a professional work environment
+My workflow included:
 
-- I used feature branches and pull requests (trunk-based development with git)
-- I used clean code and a professional folder structure.
-- I used end-to-end testing with react-testing-library
-- I used typescript, which enhance code quality and code maintainability.
+- **Git and GitHub:** I followed a structured Git workflow, using feature branches and pull requests (a variation of trunk-based development). This ensured clean, organized code and facilitated collaboration.
 
-### How to navigate this project
+- **Clean Code and Folder Structure:** Maintaining clean, readable code is paramount. I adopted professional folder structures and naming conventions to enhance code clarity and maintainability.
 
-* * *
+- **End-to-End Testing:** I employed React Testing Library for comprehensive end-to-end testing. This approach simulates real user interactions and provides high test coverage.
 
-**client**
+- **TypeScript:** I used TypeScript to enhance code quality and maintainability. Strongly typed code reduces errors and improves code documentation.
 
-- Responsive CSS using material-ui and styled-components: [example code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/client/src/features/layout/styles.ts)
-- End-To-End test with react-testing-library: [example tests](https://github.com/neuralchemist/realtime-kanban-app/tree/main/client/src/tests/projects)
-- CRUD operations with REST API: [example code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/client/src/entities/task/api/index.ts)
-- Async State-Management and Caching with react-query: [example code](https://github.com/neuralchemist/realtime-kanban-app/tree/main/client/src/entities/task/hooks)
-- Form State-Management with react-hook-from: [example code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/client/src/features/board/components/CreateTaskForm/index.tsx)
-- Real-time updates with socket.io: [example code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/client/src/common/hooks/useSocket.ts)
-- Advance State-Management with context hooks: [example code](https://github.com/neuralchemist/realtime-kanban-app/tree/main/client/src/common/context)
-- Optimized performance of component using `useMemo`: [example code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/client/src/features/board/components/TaskSection/TaskBoard.tsx)
-- Form validation with zod: [example code](https://github.com/neuralchemist/realtime-kanban-app/tree/main/client/src/entities/project/validators)
-- Reusable UI components: [example code](https://github.com/neuralchemist/realtime-kanban-app/tree/main/client/src/common/components)
+## How to navigate this project
 
-**server**
+### Client
 
-- used clean architecture to keep the core business logic (Service and Model) separate from implementation details of delivery mechanism (Controller and Routes) and data Storage (Repository): [example code](https://github.com/neuralchemist/realtime-kanban-app/tree/main/server/src/features/project)
-    - **Service layer** contains business logic that's independent of the delivery mechanism or the data source: [example code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/server/src/features/project/service/project.service.ts)
-    - **Repository layer** deals with data storage and retrieval. It abstracts the underlying data source, such as databases, APIs, or external systems: [example code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/server/src/features/project/repository/mongodb.repository.ts)
-    - **Controller layer** is part of the delivery mechanism. It handles incoming requests and outgoing responses. [example code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/server/src/features/project/contoller/projects.controller.ts)
-    - **Model layer** represents the core domain entities:  [example code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/server/src/features/project/model/project.model.ts)
-    - **Routes layer** defines the HTTP routes and endpoints exposed by the application:  [example code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/server/src/features/project/routes/projects.routes.ts)
-- zod for validation: [example code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/server/src/features/project/validator/projectCreateValidator.ts)
-- middlewares: [example code](https://github.com/neuralchemist/realtime-kanban-app/tree/main/server/src/common/middlewares)
-- socket manager for real-time communication: [example code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/server/src/common/utils/socketManager.ts)
+The client-side code includes:
 
-### Why I built the project this way
+- **Responsive CSS:** CSS is designed for responsiveness using Material-UI and Styled Components. [Example Code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/client/src/features/layout/styles.ts)
 
-* * *
+- **End-to-End Tests:** Comprehensive testing with React Testing Library. [Example Tests](https://github.com/neuralchemist/realtime-kanban-app/tree/main/client/src/tests/projects)
 
-- I used `useState`, `useContext`, `react-query`, and `react-hook-form` for state management. I didn't use a state management library like Redux on purpose since more and more projects don't use them anymore.
-- Material-UI and styled components are great for creating custom professional-looking UI components. Styled components include auto-prefixer, scoped classes, and allow smooth integration with JS.
-- Testing is vital for every production application. I focused on end-to-end testing since it simulates real user scenarios and has the highest test coverage.
-- I used the MERN stack because it encourages modular component-based architecture. This increases code re-usability and maintainability. Also, I am more familiar with these technologies.
-- Used clean architecture to make the application more maintainable, testable and adaptable to future changes in technology or requirements
+- **CRUD Operations:** REST API integration for Create, Read, Update, and Delete operations. [Example Code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/client/src/entities/task/api/index.ts)
 
-### Key Features
+- **Async State Management:** Utilizing React Query for state management and caching. [Example Code](https://github.com/neuralchemist/realtime-kanban-app/tree/main/client/src/entities/task/hooks)
 
-* * *
+- **Form State Management:** Efficient form management with React Hook Form. [Example Code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/client/src/features/board/components/CreateTaskForm/index.tsx)
 
-- User can fetch, create, update, and delete projects and tasks.
-- User can see real-time updates when teammates make changes.
-- User can drag-and-drop tasks on the board.
-- User can copy project links and share them with others for collaboration.
-- User can use the app in mobile, tablet, and desktop format.
+- **Real-Time Updates:** Implementation of real-time updates using Socket.io. [Example Code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/client/src/common/hooks/useSocket.ts)
 
-### If I had more time I would change this
+- **Advanced State Management:** Efficient state management using context hooks. [Example Code](https://github.com/neuralchemist/realtime-kanban-app/tree/main/client/src/common/context)
 
-* * *
+- **Performance Optimization:** Leveraging useMemo for optimized component performance. [Example Code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/client/src/features/board/components/TaskSection/TaskBoard.tsx)
 
-- Add unit tests and integration-tests for both server and client.
-- Setup continuous integration to run tests and ESLint on every pull request
-- Add authentication and authorization features.
-- use docker
+- **Form Validation:** Form validation using Zod. [Example Code](https://github.com/neuralchemist/realtime-kanban-app/tree/main/client/src/entities/project/validators)
 
+- **Reusable UI Components:** Developing reusable UI components for scalability. [Example Code](https://github.com/neuralchemist/realtime-kanban-app/tree/main/client/src/common/components)
+
+
+### Server
+
+The server-side code adheres to clean architecture principles:
+
+- **Service Layer:** Contains business logic independent of delivery mechanisms or data sources. [Example Code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/server/src/features/project/service/project.service.ts)
+
+- **Repository Layer:** Handles data storage and retrieval, abstracting underlying data sources. [Example Code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/server/src/features/project/repository/mongodb.repository.ts)
+
+- **Controller Layer:** Manages incoming requests and outgoing responses. [Example Code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/server/src/features/project/contoller/projects.controller.ts)
+
+- **Model Layer:** Represents core domain entities. [Example Code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/server/src/features/project/model/project.model.ts)
+
+- **Routes Layer:** Defines HTTP routes and endpoints. [Example Code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/server/src/features/project/routes/projects.routes.ts)
+
+- **Validation:** Utilizing Zod for request validation. [Example Code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/server/src/features/project/validator/projectCreateValidator.ts)
+
+- **Middlewares:** Employing various middlewares for request handling. [Example Code](https://github.com/neuralchemist/realtime-kanban-app/tree/main/server/src/common/middlewares)
+
+- **Socket Manager:** Implementing a socket manager for real-time communication. [Example Code](https://github.com/neuralchemist/realtime-kanban-app/blob/main/server/src/common/utils/socketManager.ts)
+
+
+## Why I built the project this way
+
+My choice of technologies and architecture reflects a commitment to best practices:
+
+- **Modular Component-Based Architecture:** The MERN stack encourages a modular, component-based architecture, fostering code reusability and maintainability.
+
+- **Clean Architecture:** I employed clean architecture principles to keep business logic separate from implementation details. This approach enhances maintainability, testability, and adaptability to future changes.
+
+- **State Management:** I utilized modern state management techniques including `useState`, `useContext`, `react-query`, and `react-hook-form`. Consciously, I avoided introducing a state management library like Redux, as many contemporary projects are moving away from them.
+
+- **UI Components:** Material-UI and styled components play a significant role in creating professional and customizable UI components. Styled components offer features such as auto-prefixing, scoped classes, and seamless integration with JavaScript.
+
+- **Comprehensive Testing:** Recognizing the importance of testing in production applications, I prioritized end-to-end testing. This approach effectively simulates real user scenarios and achieves extensive test coverage.
+
+
+## Key Features
+
+- **Comprehensive Project and Task Management:** Users have the ability to seamlessly perform actions like fetching, creating, updating, and deleting projects and tasks.
+
+- **Real-time Collaboration:** Teamwork becomes efficient with real-time updates, enabling users to stay synchronized when team members make changes.
+
+- **Intuitive Drag-and-Drop:** The application offers an intuitive interface, allowing users to effortlessly drag-and-drop tasks on the Kanban board.
+
+- **Easy Project Sharing:** Users can easily copy project links and share them with collaborators, enhancing collaboration and communication.
+
+- **Cross-Device Compatibility:** Whether on a mobile device, tablet, or desktop computer, users can access and utilize the application seamlessly.
+
+These features not only enhance functionality but also reflect the commitment to a user-centric and efficient design approach.
+
+
+## If I had more time I would change this
+
+Given additional time, I would further improve this project by:
+
+- Adding unit and integration tests for both server and client to enhance robustness.
+
+- Implementing continuous integration to run tests and ESLint on every pull request, ensuring code quality.
+
+- Incorporating authentication and authorization features to enhance security.
+
+- Containerizing the application using Docker for improved deployment and scalability.
+
+
+This project demonstrates my ability to apply best practices in software development, leveraging modern technologies to create a real-time Kanban application that is both functional and maintainable. Thank you for reviewing my work.
