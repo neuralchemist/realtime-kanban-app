@@ -18,7 +18,7 @@ import { useUpdateProject } from "@entities/project/hooks";
 // custom styles
 import { StyledButtonSection, StyledUpdateProjectForm } from "./styles";
 import { useToast } from "@common/hooks";
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 
 interface Props {
   project: IProject;
@@ -33,14 +33,11 @@ export function UpdateProjectForm({ project }: Props) {
     description: project.description || "",
   };
 
-
   // react-form-hook logic
   const methods = useForm({
     defaultValues,
     resolver: zodResolver(UpdateProjectValidator),
   });
-
-
 
   const onSubmit = (projectUpdate: IProjectUpdate) => {
     // add to database
